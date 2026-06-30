@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian — Systems Integration & Automation Strategy | Dubai B2B Enterprise Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: {
+              50: '#f5f5f4',
+              100: '#e7e5e4',
+              200: '#d6d3d1',
+              300: '#a8a29e',
+              400: '#78716c',
+              500: '#57534e',
+              600: '#44403c',
+              700: '#292524',
+              800: '#1c1917',
+              900: '#141210',
+              950: '#0c0a09',
+            },
+            gold: {
+              50: '#fbf8eb',
+              100: '#f5edd2',
+              200: '#ebd9a2',
+              300: '#dfbe6b',
+              400: '#d29e3b',
+              500: '#b8812c',
+              600: '#9b6422',
+              700: '#7c4c1c',
+              800: '#643c1b',
+              900: '#533219',
+              950: '#301a0b',
+            },
+            sand: {
+              50: '#fafaf9',
+              100: '#f5f5f4',
+              200: '#e7e5e4',
+              300: '#d6d3d1',
+              400: '#a8a29e',
+              500: '#78716c',
+              600: '#57534e',
+              700: '#44403c',
+              800: '#292524',
+              900: '#1c1917',
+              950: '#0c0a09',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+    .grid-bg {
+      background-image: radial-gradient(rgba(184, 129, 44, 0.1) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    .glass {
+      background: rgba(20, 18, 16, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(184, 129, 44, 0.1);
+    }
+
+    .glow-gold {
+      box-shadow: 0 0 40px -10px rgba(184, 129, 44, 0.3);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-ink-950 text-sand-100 antialiased font-sans">
+  <!-- Nav Header -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition duration-300 border-b border-transparent">
+    <div class="max-w-7xl.mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-gold-600 to-gold-400 flex items-center justify-center font-serif text-ink-950 font-bold text-xl">M</div>
+        <span class="font-serif text-2xl tracking-wide font-semibold text-sand-100">Meridian</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-sand-100/75">
+        <a href="#approach" class="hover:text-gold-400 transition">Approach</a>
+        <a href="#services" class="hover:text-gold-400 transition">Services</a>
+        <a href="#insights" class="hover:text-gold-400 transition">Market Insights</a>
+        <a href="#book" class="bg-gold-500 hover:bg-gold-600 text-ink-950 px-5 py-2 rounded-full font-semibold transition glow-gold">Book Strategy Call</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden text-sand-100 hover:text-gold-400 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden absolute top-20 left-0 w-full glass py-6 px-6 flex flex-col gap-4 text-center">
+      <a href="#approach" class="text-sand-100/80 hover:text-gold-400 py-2">Approach</a>
+      <a href="#services" class="text-sand-100/80 hover:text-gold-400 py-2">Services</a>
+      <a href="#insights" class="text-sand-100/80 hover:text-gold-400 py-2">Market Insights</a>
+      <a href="#book" class="bg-gold-500 text-ink-950 py-3 rounded-full font-semibold">Book Strategy Call</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-24 overflow-hidden">
+      <div class="absolute inset-0 grid-bg opacity-40"></div>
+      <div class="absolute top-1/4 -left-20 w-96 h-96 bg-gold-500/10 rounded-full blur-[120px]"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-gold-600/10 rounded-full blur-[120px]"></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 text-center md:text-left">
+        <div class="flex items-center gap-3 justify-center md:justify-start mb-6">
+          <span class="inline-block px-3 py-1 bg-gold-500/10 text-gold-400 text-xs tracking-widest uppercase font-semibold rounded-full border border-gold-500/20">Dubai · Abu Dhabi · UAE Enterprise Technology</span>
+        </div>
+        <h1 class="font-serif text-5xl md:text-7xl font-bold tracking-tight text-sand-100 max-w-4xl leading-[1.1] mb-6">
+          We bridge the <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-500">$17.2 billion</span> integration gap.
+        </h1>
+        <p class="text-lg md:text-xl text-sand-100/70 max-w-2xl leading-relaxed mb-10">
+          Most technology strategy in the Middle East fails because it is designed in silos. Meridian is a premium consultancy built to architect and deliver secure, sovereign, and scalable automation layers for the UAE's most ambitious conglomerates.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#book" class="bg-gold-500 hover:bg-gold-600 text-ink-950 font-bold px-8 py-4 rounded-full transition text-center glow-gold">Initialize Consultation</a>
+          <a href="#approach" class="glass hover:bg-ink-900/50 text-sand-100 font-semibold px-8 py-4 rounded-full transition text-center border border-gold-500/20">Explore the Methodology</a>
+        </div>
+
+        <!-- Quick Stats Grid -->
+        <div class="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div class="p-6 lg:p-8 bg-ink-900/50 border border-gold-500/10 rounded-2xl">
+            <div class="font-serif text-4xl lg:text-5xl font-bold text-gold-400">92%</div>
+            <div class="mt-2 text-sm text-sand-100/50 font-medium">B2B Integration Success Rate</div>
+          </div>
+          <div class="p-6 lg:p-8 bg-ink-900/50 border border-gold-500/10 rounded-2xl">
+            <div class="font-serif text-4xl lg:text-5xl font-bold text-gold-400">AED 45M+</div>
+            <div class="mt-2 text-sm text-sand-100/50 font-medium">Enterprise Cost Savings Realized</div>
+          </div>
+          <div class="p-6 lg:p-8 bg-ink-900/50 border border-gold-500/10 rounded-2xl">
+            <div class="font-serif text-4xl lg:text-5xl font-bold text-gold-400">&lt; 150ms</div>
+            <div class="mt-2 text-sm text-sand-100/50 font-medium">Cross-System API Latency Goal</div>
+          </div>
+          <div class="p-6 lg:p-8 bg-ink-900/50 border border-gold-500/10 rounded-2xl">
+            <div class="font-serif text-4xl lg:text-5xl font-bold text-gold-400">100%</div>
+            <div class="mt-2 text-sm text-sand-100/50 font-medium">UAE Data Residency Compliance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted By Band -->
+    <section class="py-12 border-y border-gold-500/10 bg-ink-950/50">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-center text-xs tracking-widest uppercase text-sand-100/40 mb-8 font-semibold">Trusted by Enterprise Leaders across regional verticals</p>
+        <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 text-sand-100/30 text-sm font-semibold tracking-wider uppercase">
+          <span>Downtown Real Estate ◆</span>
+          <span>Jebel Ali Logistics ◆</span>
+          <span>DIFC Asset Management ◆</span>
+          <span>Dubai Health District</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: The Paradox -->
+    <section id="insights" class="py-24 lg:py-32 bg-ink-950 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mb-16 reveal">
+          <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">The Dubai Integration Paradox</span>
+          <h2 class="mt-4 font-serif text-4xl md:text-5xl font-bold text-sand-100 leading-tight">Your tech budget isn't the problem. Your integration is.</h2>
+          <p class="mt-6 text-sand-100/60 leading-relaxed">Dubai enterprises invest 3x more in premium SaaS and AI models than global averages, yet suffer from severe 'digital friction'. Buying tools is easy; harmonizing them under Middle Eastern regulatory and sovereign frameworks is where multi-billion-dirham projects succeed or fail.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="reveal glass rounded-2xl p-6 hover:border-gold-500/30 transition">
+            <div class="w-12 h-12 rounded-lg bg-gold-500/10 flex items-center justify-center mb-6 text-gold-400 font-bold">1</div>
+            <h3 class="font-serif text-2xl text-sand-100 mb-3">The "Best-of-Breed" Legacy Trap</h3>
+            <p class="text-sand-100/50 text-sm leading-relaxed">Top-tier solutions (SAP, Salesforce, Oracle) purchased as standalone silos require custom, brittle point-to-point connections that break on every major update.</p>
+          </div>
+          <div class="reveal glass rounded-2xl p-6 hover:border-gold-500/30 transition">
+            <div class="w-12 h-12 rounded-lg bg-gold-500/10 flex items-center justify-center mb-6 text-gold-400 font-bold">2</div>
+            <h3 class="font-serif text-2xl text-sand-100 mb-3">The Technology-First Fallacy</h3>
+            <p class="text-sand-100/50 text-sm leading-relaxed">Consultants love selling flashy software packages without first mapping the intricate, cross-departmental operations unique to Dubai conglomerates.</p>
+          </div>
+          <div class="reveal glass rounded-2xl p-6 hover:border-gold-500/30 transition">
+            <div class="w-12 h-12 rounded-lg bg-gold-500/10 flex items-center justify-center mb-6 text-gold-400 font-bold">3</div>
+            <h3 class="font-serif text-2xl text-sand-100 mb-3">The Legacy AI Gap</h3>
+            <p class="text-sand-100/50 text-sm leading-relaxed">Organizations try to deploy Generative AI over unstructured, dirty, and isolated on-prem databases, leading to high hallucinations and security leaks.</p>
+          </div>
+          <div class="reveal glass rounded-2xl p-6 hover:border-gold-500/30 transition">
+            <div class="w-12 h-12 rounded-lg bg-gold-500/10 flex items-center justify-center mb-6 text-gold-400 font-bold">4</div>
+            <h3 class="font-serif text-2xl text-sand-100 mb-3">The Talent Chasm</h3>
+            <p class="text-sand-100/50 text-sm leading-relaxed">Finding integration engineers who understand both modern iPaaS middleware and complex local ELV/physical systems is an ongoing challenge.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: The Approach -->
+    <section id="approach" class="py-24 lg:py-32 bg-ink-900/30 relative border-y border-gold-500/5">
+      <div class="absolute inset-0 grid-bg opacity-20"></div>
+      <div class="relative max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">The Meridian Approach</span>
+            <h2 class="mt-4 font-serif text-4xl md:text-5xl font-bold text-sand-100 leading-tight">We reversed the traditional consulting playbook.</h2>
+            <p class="mt-6 text-sand-100/60 leading-relaxed">We don't deliver 300-page slide decks and then walk away. We architect physical-to-digital middleware blueprints, build production-ready integrations, and guarantee zero-trust data sovereignty.</p>
+
+            <div class="mt-10 space-y-6">
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 font-bold text-xs">✦</div>
+                <div>
+                  <h4 class="font-semibold text-sand-100">Lead with Process, Not Technology</h4>
+                  <p class="text-sm text-sand-100/50 mt-1">We map your operational workflows in real estate, logistics, or finance before writing a single line of integration code.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 font-bold text-xs">✦</div>
+                <div>
+                  <h4 class="font-semibold text-sand-100">One Throat to Choke</h4>
+                  <p class="text-sm text-sand-100/50 mt-1">We own the entire pipeline — from software APIs and cloud databases to the physical Extra Low Voltage (ELV) IoT sensors on your shop floor.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 font-bold text-xs">✦</div>
+                <div>
+                  <h4 class="font-semibold text-sand-100">Sovereignty Guaranteed</h4>
+                  <p class="text-sm text-sand-100/50 mt-1">Our system designs follow strict UAE personal data protection laws (PDPL) with secure multi-tenant or private localized hosting.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 font-bold text-xs">✦</div>
+                <div>
+                  <h4 class="font-semibold text-sand-100">Business-Outcome Pricing</h4>
+                  <p class="text-sm text-sand-100/50 mt-1">We tie our final milestones directly to business performance: lower latency, reduced processing errors, and automated workflows.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <div class="glass rounded-2xl p-8 border border-gold-500/20 shadow-2xl relative overflow-hidden">
+              <div class="absolute -right-20 -top-20 w-60 h-60 bg-gold-500/5 rounded-full blur-3xl"></div>
+              <h3 class="font-serif text-xl text-sand-100/80 mb-6 flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-gold-400 inline-block animate-pulse"></span> The Meridian Middleware Architecture</h3>
+              <div class="space-y-4">
+                <!-- Visual Nodes -->
+                <div class="bg-ink-950/80 rounded-xl p-4 border border-gold-500/10">
+                  <div class="text-xs uppercase text-gold-400 tracking-wider font-mono">Input Systems Layer</div>
+                  <div class="flex justify-between items-center mt-2 text-sm">
+                    <span class="text-sand-100/70">Legacy CRM, ERP, ELV Sensors</span>
+                    <span class="px-2 py-0.5 bg-green-500/10 text-green-400 text-xs rounded border border-green-500/20 font-mono">CONNECTED</span>
+                  </div>
+                </div>
+
+                <div class="my-4 flex justify-center">
+                  <div class="w-0.5 h-8 bg-gradient-to-b from-gold-500 to-transparent"></div>
+                </div>
+
+                <div class="bg-ink-900 rounded-xl p-5 border border-gold-500/30 shadow-lg relative">
+                  <div class="absolute inset-0 bg-gold-500/5 rounded-xl pointer-events-none"></div>
+                  <div class="text-xs uppercase text-gold-400 tracking-wider font-mono font-bold">Meridian Integration & iPaaS Layer</div>
+                  <div class="text-sm font-semibold mt-1">Unified Real-Time Event Bus</div>
+                  <div class="flex gap-2 mt-3 flex-wrap">
+                    <span class="text-xs px-2 py-1 bg-ink-950 text-sand-100/70 rounded border border-gold-500/10 font-mono">Data Sovereignty Rules</span>
+                    <span class="text-xs px-2 py-1 bg-ink-950 text-sand-100/70 rounded border border-gold-500/10 font-mono">Payload Validation</span>
+                    <span class="text-xs px-2 py-1 bg-ink-950 text-sand-100/70 rounded border border-gold-500/10 font-mono">Zero-Latency Cache</span>
+                  </div>
+                </div>
+
+                <div class="my-4 flex justify-center">
+                  <div class="w-0.5 h-8 bg-gradient-to-b from-transparent to-gold-500"></div>
+                </div>
+
+                <div class="bg-ink-950/80 rounded-xl p-4 border border-gold-500/10">
+                  <div class="text-xs uppercase text-gold-400 tracking-wider font-mono">Downstream Orchestration</div>
+                  <div class="flex justify-between items-center mt-2 text-sm">
+                    <span class="text-sand-100/70">AI Copilots, Analytics Lakes, Smart Hubs</span>
+                    <span class="px-2 py-0.5 bg-green-500/10 text-green-400 text-xs rounded border border-green-500/20 font-mono">READY</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center pt-6 mt-6 border-t border-gold-500/10">
+                <div class="font-serif text-2xl text-gold-400 font-bold">148ms</div>
+                <div class="text-xs text-sand-100/50 mt-1 uppercase font-mono tracking-wider">Average End-to-End Latency Achieved</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Services -->
+    <section id="services" class="py-24 lg:py-32 bg-ink-950 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mb-16 reveal">
+          <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Specialist Capabilities</span>
+          <h2 class="mt-4 font-serif text-4xl md:text-5xl font-bold text-sand-100 leading-tight">Architectural Excellence for UAE Conglomerates</h2>
+          <p class="mt-6 text-sand-100/60 leading-relaxed">Our execution capabilities combine premium enterprise integration, IoT systems development, and data compliance protocols built specifically for the local regulatory landscape.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Service 1 -->
+          <div class="reveal glass rounded-2xl p-8 lg:p-10 group hover:border-gold-500/40 transition">
+            <div class="flex items-start justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-gold-500/10 group-hover:bg-gold-500/20 flex items-center justify-center transition">
+                <svg class="w-7 h-7 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21a9 9 0 009-9 9 9 0 00-9 9 9 9 0 010-9 9 9 0 019 9m-9 9a9 9 0 010-9 9 9 0 019 9" /></svg>
+              </div>
+              <span class="text-xs text-sand-100/30 font-mono">01</span>
+            </div>
+            <h3 class="font-serif text-2xl lg:text-3xl text-sand-100 mb-3">Enterprise Architecture & iPaaS</h3>
+            <p class="text-sand-100/60 text-sm leading-relaxed mb-5">A single, centralized middleware platform that lets your real estate arm share loyalty data with your hospitality arm. We design hybrid, multi-cloud architectures that satisfy UAE data residency while leveraging global SaaS.</p>
+            <ul class="space-y-2 text-sm text-sand-100/50">
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> SaaS-to-SaaS & SaaS-to-on-prem API integration</li>
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> Cross-vertical data unification for conglomerates</li>
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> Low-code/no-code interfaces for business analysts</li>
+            </ul>
+          </div>
+          <!-- Service 2 -->
+          <div class="reveal glass rounded-2xl p-8 lg:p-10 group hover:border-gold-500/40 transition">
+            <div class="flex items-start justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-gold-500/10 group-hover:bg-gold-500/20 flex items-center justify-center transition">
+                <svg class="w-7 h-7 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.456-2.456L14.25 6l1.035-.259a3.375 3.375 0 002.456-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" /></svg>
+              </div>
+              <span class="text-xs text-sand-100/30 font-mono">02</span>
+            </div>
+            <h3 class="font-serif text-2xl lg:text-3xl text-sand-100 mb-3">AI & Automation Readiness</h3>
+            <p class="text-sand-100/60 text-sm leading-relaxed mb-5">Before you can deploy GenAI, you need clean, accessible data. We build the data foundations — modern APIs, unified data lakes, governance frameworks — that make your enterprise LLM-ready without ripping out legacy systems.</p>
+            <ul class="space-y-2 text-sm text-sand-100/50">
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> Legacy database API modernization</li>
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> GenAI/LLM data pipeline engineering</li>
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> Predictive automation for ops & logistics</li>
+            </ul>
+          </div>
+          <!-- Service 3 -->
+          <div class="reveal glass rounded-2xl p-8 lg:p-10 group hover:border-gold-500/40 transition">
+            <div class="flex items-start justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-gold-500/10 group-hover:bg-gold-500/20 flex items-center justify-center transition">
+                <svg class="w-7 h-7 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21a9 9 0 009-9 9 9 0 00-9 9 9 9 0 010-9 9 9 0 019 9m-9 9a9 9 0 010-9 9 9 0 019 9" /></svg>
+              </div>
+              <span class="text-xs text-sand-100/30 font-mono">03</span>
+            </div>
+            <h3 class="font-serif text-2xl lg:text-3xl text-sand-100 mb-3">ELV, IoT & Smart Infrastructure</h3>
+            <p class="text-sand-100/60 text-sm leading-relaxed mb-5">We bridge the physical and digital. From IoT-enabled smart warehousing to automated building management in Downtown Dubai, we integrate Extra Low Voltage systems and physical sensors into your enterprise data layer.</p>
+            <ul class="space-y-2 text-sm text-sand-100/50">
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> ELV & ICT infrastructure integration</li>
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> Smart building & warehouse automation</li>
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> Physical-to-digital data pipeline engineering</li>
+            </ul>
+          </div>
+          <!-- Service 4 -->
+          <div class="reveal glass rounded-2xl p-8 lg:p-10 group hover:border-gold-500/40 transition">
+            <div class="flex items-start justify-between mb-6">
+              <div class="w-14 h-14 rounded-xl bg-gold-500/10 group-hover:bg-gold-500/20 flex items-center justify-center transition">
+                <svg class="w-7 h-7 text-gold-400" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.746 3.746 0 0121 12z" /></svg>
+              </div>
+              <span class="text-xs text-sand-100/30 font-mono">04</span>
+            </div>
+            <h3 class="font-serif text-2xl lg:text-3xl text-sand-100 mb-3">Secure-by-Design Governance</h3>
+            <p class="text-sand-100/60 text-sm leading-relaxed mb-5">Security isn't an afterthought. Every Meridian architecture ships with end-to-end encryption, localized hosting options, and ironclad role-based access controls — built for UAE regulatory reality from day one.</p>
+            <ul class="space-y-2 text-sm text-sand-100/50">
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> UAE data sovereignty architecture</li>
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> Zero-trust access & RBAC frameworks</li>
+              <li class="flex items-center gap-2"><span class="text-gold-400">✦</span> Compliance with PDPL & Dubai smart city mandates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive booking Section -->
+    <section id="book" class="py-24 lg:py-32 bg-ink-900/40 relative border-t border-gold-500/10">
+      <div class="absolute inset-0 grid-bg opacity-20"></div>
+      <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-12">
+          <span class="text-gold-400 font-semibold text-xs tracking-widest uppercase">Consultation Scheduling</span>
+          <h2 class="mt-4 font-serif text-4xl md:text-5xl font-bold text-sand-100">Initialize Your Strategy Session</h2>
+          <p class="mt-4 text-sand-100/60 max-w-2xl mx-auto">Meet with a senior Meridian enterprise architect to map out your system pain points, evaluate architecture latency, and explore Dubai smart city automation opportunities.</p>
+        </div>
+
+        <div class="glass rounded-2xl p-8 md:p-12 border border-gold-500/20">
+          <form id="contactForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs uppercase text-sand-100/50 font-mono tracking-wider mb-2">Name</label>
+                <input type="text" required class="w-full bg-ink-950 border border-gold-500/20 rounded-xl px-4 py-3 text-sand-100 focus:outline-none focus:border-gold-400 transition" placeholder="Your Name">
+              </div>
+              <div>
+                <label class="block text-xs uppercase text-sand-100/50 font-mono tracking-wider mb-2">Company Email</label>
+                <input type="email" required class="w-full bg-ink-950 border border-gold-500/20 rounded-xl px-4 py-3 text-sand-100 focus:outline-none focus:border-gold-400 transition" placeholder="name@company.ae">
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs uppercase text-sand-100/50 font-mono tracking-wider mb-2">Company Name</label>
+                <input type="text" required class="w-full bg-ink-950 border border-gold-500/20 rounded-xl px-4 py-3 text-sand-100 focus:outline-none focus:border-gold-400 transition" placeholder="e.g. Downtown Holding">
+              </div>
+              <div>
+                <label class="block text-xs uppercase text-sand-100/50 font-mono tracking-wider mb-2">Primary Integration Challenge</label>
+                <select class="w-full bg-ink-950 border border-gold-500/20 rounded-xl px-4 py-3 text-sand-100 focus:outline-none focus:border-gold-400 transition">
+                  <option>Siloed SaaS / Enterprise iPaaS</option>
+                  <option>AI Readiness & Data Pipeline Engineering</option>
+                  <option>ELV, IoT & Smart Building Systems</option>
+                  <option>UAE Data Compliance (PDPL / Sovereignty)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase text-sand-100/50 font-mono tracking-wider mb-2">Current Systems Stack & Context</label>
+              <textarea rows="4" class="w-full bg-ink-950 border border-gold-500/20 rounded-xl px-4 py-3 text-sand-100 focus:outline-none focus:border-gold-400 transition" placeholder="Tell us about your current CRM/ERP/IoT databases and target integration goals..."></textarea>
+            </div>
+
+            <div class="pt-4">
+              <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-ink-950 font-bold py-4 rounded-xl transition shadow-lg hover:shadow-gold-500/10 glow-gold">Request High-Level Briefing</button>
+            </div>
+            <p class="text-center text-xs text-sand-100/40 mt-4">Consultations are bound by rigid mutual non-disclosure terms protecting UAE proprietary architectures.</p>
+          </form>
+          <div id="formSuccess" class="hidden text-center py-8">
+            <svg class="w-16 h-16 text-gold-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h3 class="font-serif text-2xl font-bold text-sand-100">Inquiry Received</h3>
+            <p class="text-sand-100/60 mt-2 max-w-md mx-auto">A senior enterprise architect from our Downtown Dubai suite will reach out within one business day with a secure scheduling link.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gold-500/10 py-12 bg-ink-950">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded bg-gradient-to-tr from-gold-600 to-gold-400 flex items-center justify-center font-serif text-ink-950 font-bold text-lg">M</div>
+        <span class="font-serif text-xl tracking-wide font-semibold text-sand-100">Meridian</span>
+      </div>
+      <p class="text-xs text-sand-100/40">© 2026 Meridian Strategy Group. Downtown Dubai, United Arab Emirates. All rights reserved.</p>
+      <div class="flex gap-6 text-xs text-sand-100/50">
+        <a href="#top" class="hover:text-gold-400 transition">Back to Top</a>
+        <a href="#" class="hover:text-gold-400 transition">Confidentiality Agreement</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header background change on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('glass', 'border-gold-500/10');
+        nav.classList.remove('border-transparent');
+      } else {
+        nav.classList.remove('glass', 'border-gold-500/10');
+        nav.classList.add('border-transparent');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth reveal animation on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add('active');
+        }
+      }
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // Trigger initial check
+
+    // Contact Form submission
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      contactForm.classList.add('hidden');
+      formSuccess.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
